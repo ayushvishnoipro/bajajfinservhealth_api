@@ -20,20 +20,6 @@ A comprehensive FastAPI implementation of the Bajaj Finserv Health (BFHL) API sp
 - 📚 **Auto-generated API Documentation** (Swagger/ReDoc)
 - 🔧 **Environment-based Configuration**
 
-## 📋 Table of Contents
-
-- [API Specification](#-api-specification)
-- [Screenshots](#-screenshots)
-- [Processing Rules](#-processing-rules)  
-- [Quick Start](#-quick-start)
-- [Local Development](#-local-development)
-- [Testing](#-testing)
-- [API Examples](#-api-examples)
-- [Deployment](#-deployment)
-- [Project Structure](#-project-structure)
-- [Technology Stack](#-technology-stack)
-- [Contributing](#-contributing)
-
 ## 📊 Screenshots
 
 ### API Documentation (Swagger UI)
@@ -46,20 +32,7 @@ A comprehensive FastAPI implementation of the Bajaj Finserv Health (BFHL) API sp
 ![API Response](screenshots/api-response.png)
 *Example of successful API response with categorized data*
 
-### Testing Suite Results
-<!-- Add screenshot of pytest results -->
-![Test Results](screenshots/test-results.png)
-*Comprehensive test suite with 100% specification coverage*
 
-### Render Deployment
-<!-- Add screenshot of deployed app on Render -->
-![Render Deployment](screenshots/render-deployment.png)
-*Production deployment on Render with live endpoint*
-
-### API Testing with Postman/Insomnia
-<!-- Add screenshot of API testing tool -->
-![API Testing](screenshots/api-testing.png)
-*Testing the API endpoints with various data inputs*
 
 ## 🔧 API Specification
 
@@ -146,77 +119,6 @@ Complex 4-step process for alphabetic character processing:
 - Alternate: `['R'(upper), 'a'(lower)]`
 - Result: `"Ra"`
 
-## ⚡ Quick Start
-
-```bash
-# Clone and setup
-git clone <your-repo-url>
-cd bfhl-fastapi
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set environment variables
-export FULL_NAME="john_doe"
-export DOB_DDMMYYYY="17091999"
-export EMAIL="john@xyz.com"
-export ROLL_NUMBER="ABCD123"
-
-# Run the application
-uvicorn app.main:app --reload
-
-# Test the API
-curl -X POST "http://localhost:8000/bfhl" \
-  -H "Content-Type: application/json" \
-  -d '{"data": ["a","1","334","4","R","$"]}'
-```
-
-## 💻 Local Development
-
-### 📋 Prerequisites
-- Python 3.11.9+
-- pip (Python package manager)
-- Git (for version control)
-
-### 🛠️ Setup Instructions
-
-1. **Clone the Repository**
-   ```bash
-   git clone <your-repository-url>
-   cd bfhl-fastapi
-   ```
-
-2. **Create Virtual Environment**
-   ```bash
-   # Windows
-   python -m venv venv
-   venv\Scripts\activate
-   
-   # macOS/Linux
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-3. **Install Dependencies**
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-
-4. **Configure Environment Variables**
-   ```bash
-   # Windows PowerShell
-   $env:FULL_NAME = "your_name"
-   $env:DOB_DDMMYYYY = "17091999"
-   $env:EMAIL = "your.email@example.com"
-   $env:ROLL_NUMBER = "YOUR123"
-   
-   # macOS/Linux/Git Bash
-   export FULL_NAME="your_name"
-   export DOB_DDMMYYYY="17091999"  
-   export EMAIL="your.email@example.com"
-   export ROLL_NUMBER="YOUR123"
-   ```
 
 ### 🚀 Running the Application
 
@@ -231,64 +133,10 @@ curl -X POST "http://localhost:8000/bfhl" \
    - **ReDoc Documentation**: http://localhost:8000/redoc
    - **Health Check**: http://localhost:8000/health
 
-### 🔧 Development Tools
-
-- **Auto-reload**: Code changes trigger automatic server restart
-- **Interactive Docs**: Test API directly in browser
-- **Type Hints**: Full typing support with Pydantic v2
-- **Logging**: Comprehensive request/response logging
-
-## 🧪 Testing
-### 🎯 Test Suite Overview
-
-Our comprehensive test suite covers all specification requirements:
-
-- ✅ All 3 official examples from BFHL specification
-- ✅ Edge cases (empty arrays, mixed types)
-- ✅ Error handling scenarios
-- ✅ Input validation testing
-- ✅ Response format verification
-
-### 🏃‍♂️ Running Tests
-
-```bash
-# Run all tests
-pytest
-
-# Run with verbose output
-pytest -v
-
-# Run specific test file
-pytest tests/test_bfhl.py -v
-
-# Run tests with coverage report
-pytest --cov=app tests/
-
-# Run tests and generate HTML coverage report
-pytest --cov=app --cov-report=html tests/
-```
-
-### 📊 Test Coverage
-
-The test suite includes these critical test cases:
-
-| Test Case | Description | Expected Behavior |
-|-----------|-------------|-------------------|
-| **Example A** | `["a","1","334","4","R","$"]` | Basic mixed data processing |
-| **Example B** | `["2","a","y","4","&","-","*","5","92","b"]` | Complex mixed content |
-| **Example C** | `["A","ABcD","DOE"]` | Pure alphabetic processing |
-| **Empty Data** | `[]` | Graceful empty input handling |
-| **Mixed Types** | Numbers and strings | Type coercion validation |
-| **Error Cases** | Invalid requests | Error response format |
-
-### 🧪 Test Results Screenshot
-<!-- Add screenshot of test results here -->
-![Test Results](screenshots/pytest-results.png)
-*All tests passing with detailed output*
-
 ## 🔍 API Examples
 
 ### 🎯 Example 1: Basic Mixed Data
+<img width="1880" height="1016" alt="image" src="https://github.com/user-attachments/assets/6ce3a7d3-a475-42a4-93bf-5ddfea112924" />
 
 **Request:**
 ```bash
@@ -312,8 +160,11 @@ curl -X POST "http://localhost:8000/bfhl" \
   "concat_string": "Ra"
 }
 ```
+<img width="1591" height="602" alt="image" src="https://github.com/user-attachments/assets/0a97daaf-6eff-41f4-9bbb-684e0cc99ae4" />
+
 
 ### 🎯 Example 2: Complex Mixed Content
+<img width="1773" height="1012" alt="image" src="https://github.com/user-attachments/assets/04d1a2fc-f130-493d-a558-f0c8f21d583a" />
 
 **Request:**
 ```bash
@@ -337,8 +188,10 @@ curl -X POST "http://localhost:8000/bfhl" \
   "concat_string": "ByA"
 }
 ```
+<img width="1000" height="697" alt="image" src="https://github.com/user-attachments/assets/093d9bfa-839b-4a05-93d0-255936f96ae2" />
 
 ### 🎯 Example 3: Pure Alphabetic Processing
+<img width="1829" height="961" alt="image" src="https://github.com/user-attachments/assets/a75ad87b-7a27-48ed-8da2-3ed0f7a2777b" />
 
 **Request:**
 ```bash
@@ -362,8 +215,11 @@ curl -X POST "http://localhost:8000/bfhl" \
   "concat_string": "EoDdCbAa"
 }
 ```
+<img width="997" height="520" alt="image" src="https://github.com/user-attachments/assets/e4ef4f28-fd81-4aec-b97b-0f62eb5ff74f" />
+
 
 ### 🎯 Example 4: Advanced Test Case
+<img width="1801" height="1006" alt="image" src="https://github.com/user-attachments/assets/c1bb5eec-87fc-4698-80c9-95025550f967" />
 
 **Request:**
 ```bash
@@ -387,8 +243,11 @@ curl -X POST "http://localhost:8000/bfhl" \
   "concat_string": "TsEtWoRlDhElLo"
 }
 ```
+<img width="1225" height="642" alt="image" src="https://github.com/user-attachments/assets/0bd38ef0-5efe-46f9-bb6b-a3dd158413db" />
+
 
 ### 🔴 Error Response Example
+<img width="1781" height="972" alt="image" src="https://github.com/user-attachments/assets/f89eaf41-b7a3-4be7-9ea8-a2c204a3c649" />
 
 **Request with Invalid Data:**
 ```bash
@@ -409,88 +268,11 @@ curl -X POST "http://localhost:8000/bfhl" \
     }
   ]
 }
+
 ```
+<img width="998" height="541" alt="image" src="https://github.com/user-attachments/assets/eec3d90c-5292-4b8b-bb13-cb319c2da0e5" />
 
-## 🚀 Deployment
 
-### 🌐 Render Deployment (Native Python)
-
-This project is optimized for seamless deployment on Render using native Python support.
-
-#### 📋 Prerequisites
-- GitHub account
-- Render account (free tier available)
-- Environment variables ready
-
-#### 🔧 Deployment Steps
-
-1. **Prepare Repository**
-   ```bash
-   # Initialize git repository
-   git init
-   git add .
-   git commit -m "feat: implement BFHL FastAPI endpoint + tests + Render config"
-   
-   # Push to GitHub
-   git branch -M main
-   git remote add origin https://github.com/yourusername/bfhl-fastapi.git
-   git push -u origin main
-   ```
-
-2. **Configure Render Service**
-   - Go to [Render Dashboard](https://dashboard.render.com)
-   - Click **"New"** → **"Web Service"**
-   - Connect your GitHub repository
-   - Render auto-detects `render.yaml` configuration
-
-3. **Set Environment Variables**
-   ```yaml
-   FULL_NAME: your_name_here
-   DOB_DDMMYYYY: your_birthdate
-   EMAIL: your.email@example.com
-   ROLL_NUMBER: your_roll_number
-   ```
-
-4. **Deploy**
-   - Click **"Create Web Service"**
-   - Render automatically builds and deploys
-   - Live URL will be provided
-
-#### 🔗 Testing Deployed API
-
-```bash
-curl -X POST "https://your-app-name.onrender.com/bfhl" \
-  -H "Content-Type: application/json" \
-  -d '{"data": ["a","1","334","4","R","$"]}'
-```
-
-#### 📸 Deployment Screenshots
-<!-- Add screenshots of Render deployment process -->
-![Render Setup](screenshots/render-setup.png)
-*Render deployment configuration*
-
-![Live Application](screenshots/live-app.png)
-*Successfully deployed application*
-
-### 🏗️ Alternative Deployment Options
-
-#### Vercel
-```bash
-npm i -g vercel
-vercel --prod
-```
-
-#### Railway
-```bash
-railway login
-railway deploy
-```
-
-#### Heroku
-```bash
-heroku create your-app-name
-git push heroku main
-```
 
 ## 📁 Project Structure
 
@@ -538,45 +320,6 @@ bfhl-fastapi/
 | **Pydantic** | 2.8.2 | Data validation | Type safety, auto-validation |
 | **Uvicorn** | 0.30.0 | ASGI server | Production-ready, fast |
 
-### 🧪 Development & Testing
-
-| Tool | Version | Purpose |
-|------|---------|---------|
-| **Pytest** | 7.4.0 | Testing framework |
-| **Requests** | 2.31.0 | HTTP client for tests |
-| **TestClient** | Built-in | FastAPI testing utilities |
-
-### ☁️ Deployment & Production
-
-| Service | Purpose | Configuration |
-|---------|---------|---------------|
-| **Render** | Hosting platform | Native Python support |
-| **Gunicorn** | Production server | Multi-worker WSGI |
-| **GitHub** | Version control | CI/CD integration |
-
-### 🔒 Security & Best Practices
-
-- ✅ **Environment-based configuration**
-- ✅ **Input validation with Pydantic**
-- ✅ **CORS middleware (configurable)**
-- ✅ **Comprehensive error handling**
-- ✅ **Type hints throughout codebase**
-- ✅ **Structured logging**
-
-## 🎯 Performance & Reliability
-
-### 📊 Performance Metrics
-- **Response Time**: < 100ms for typical requests
-- **Memory Usage**: ~50MB base memory footprint
-- **Concurrent Requests**: Supports high concurrency with async/await
-- **Error Rate**: < 0.1% with comprehensive error handling
-
-### 🔄 Reliability Features
-- **Graceful Error Handling**: Always returns HTTP 200 with structured errors
-- **Input Validation**: Robust data validation with Pydantic
-- **Health Checks**: Built-in health monitoring endpoints
-- **Logging**: Comprehensive request/response logging
-
 ## 🔧 Environment Configuration
 
 ### 🔑 Required Environment Variables
@@ -598,140 +341,3 @@ DOB_DDMMYYYY=17091999
 EMAIL=john@xyz.com
 ROLL_NUMBER=ABCD123
 ```
-
-## 🤝 Contributing
-
-We welcome contributions to improve the BFHL FastAPI implementation! 
-
-### 🚀 Getting Started
-
-1. **Fork the Repository**
-   ```bash
-   git fork https://github.com/yourusername/bfhl-fastapi.git
-   cd bfhl-fastapi
-   ```
-
-2. **Create Development Environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # or venv\Scripts\activate on Windows
-   pip install -r requirements.txt
-   ```
-
-3. **Create Feature Branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-### 🧪 Development Guidelines
-
-- **Code Style**: Follow PEP 8 standards
-- **Type Hints**: Add type hints to all functions
-- **Documentation**: Update docstrings and README
-- **Testing**: Add tests for new features
-- **Commits**: Use conventional commit messages
-
-### 🔍 Code Quality Checks
-
-```bash
-# Run tests
-pytest -v
-
-# Check code style (if using flake8)
-flake8 app/ tests/
-
-# Type checking (if using mypy)
-mypy app/
-
-# Run all quality checks
-pytest && flake8 app/ tests/
-```
-
-### 📝 Pull Request Process
-
-1. **Ensure Tests Pass**: All existing and new tests must pass
-2. **Update Documentation**: Update README and docstrings as needed
-3. **Add Screenshots**: Include screenshots for UI/API changes
-4. **Describe Changes**: Write clear PR description with examples
-5. **Review Process**: Maintainers will review and provide feedback
-
-### 🐛 Reporting Issues
-
-- **Bug Reports**: Use GitHub issues with detailed reproduction steps
-- **Feature Requests**: Describe the use case and expected behavior
-- **Questions**: Check existing issues or start a discussion
-
-### 📋 Issue Template
-
-```markdown
-**Bug Report / Feature Request**
-
-**Description**: Clear description of the issue/feature
-
-**Steps to Reproduce** (for bugs):
-1. Send request with data: `{"data": [...]}`
-2. Expected behavior: ...
-3. Actual behavior: ...
-
-**Environment**:
-- Python version: 
-- FastAPI version:
-- OS: 
-
-**Additional Context**: Any relevant logs or screenshots
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2025 BFHL FastAPI Contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-## 🙏 Acknowledgments
-
-- **Bajaj Finserv Health** for the comprehensive API specification
-- **FastAPI Community** for the excellent framework and documentation
-- **Pydantic Team** for robust data validation capabilities
-- **Render** for providing seamless deployment platform
-- **Contributors** who help improve this implementation
-
-## 📞 Support
-
-- 📧 **Email**: your.email@example.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/bfhl-fastapi/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/bfhl-fastapi/discussions)
-- 📖 **Documentation**: [API Docs](https://your-app.onrender.com/docs)
-
----
-
-<div align="center">
-
-**⭐ Star this repository if you find it helpful! ⭐**
-
-Made with ❤️ using FastAPI and Python
-
-[🔗 Live Demo](https://your-app.onrender.com/docs) | [📖 Documentation](https://your-app.onrender.com/redoc) | [🐛 Report Bug](https://github.com/yourusername/bfhl-fastapi/issues)
-
-</div>
