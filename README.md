@@ -20,18 +20,10 @@ A comprehensive FastAPI implementation of the Bajaj Finserv Health (BFHL) API sp
 - 📚 **Auto-generated API Documentation** (Swagger/ReDoc)
 - 🔧 **Environment-based Configuration**
 
-## 📊 Screenshots
 
 ### API Documentation (Swagger UI)
 <!-- Add screenshot of Swagger UI documentation -->
-![Swagger UI](screenshots/swagger-ui.png)
-*Auto-generated API documentation with interactive testing interface*
-
-### Successful API Response
-<!-- Add screenshot of successful API response -->
-![API Response](screenshots/api-response.png)
-*Example of successful API response with categorized data*
-
+<img width="1643" height="848" alt="image" src="https://github.com/user-attachments/assets/df645e32-0e15-4acd-80c1-93474d279aa3" />
 
 
 ## 🔧 API Specification
