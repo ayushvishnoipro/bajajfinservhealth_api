@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: bfhl-fastapi
+    env: python
+    runtime: python-3.11.9
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: FULL_NAME
+        value: john_doe
+      - key: DOB_DDMMYYYY
+        value: 17091999
+      - key: EMAIL
+        value: john@xyz.com
+      - key: ROLL_NUMBER
+        value: ABCD123
+    autoDeploy: true
